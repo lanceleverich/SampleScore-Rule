@@ -3,6 +3,6 @@
     <ksession name="kieSession1" type="stateless" default="true" clockType="realtime"/>
   </kbase>
   <kbase name="kieBase2" default="false" eventProcessingMode="stream" equalsBehavior="identity" packages="com.demo">
-    <ksession name="kieSession2" type="stateless" default="true" clockType="realtime"/>
+    <ksession name="kieSession2" type="stateless" default="false" clockType="realtime"/>
   </kbase>
 </kmodule>
