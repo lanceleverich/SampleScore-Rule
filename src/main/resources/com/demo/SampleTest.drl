@@ -1,0 +1,14 @@
+package com.demo;
+
+
+import com.sample.Applicant;
+
+rule "Rule" 
+
+when     
+ app : Applicant(totalScore >= 412 ,totalScore <= 450 ) 	
+then  
+ System.out.println(" LOW RISK - APPLICATION SCORE : "+app.getTotalScore() );
+end
+
+
