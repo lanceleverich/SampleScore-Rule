@@ -8,11 +8,22 @@
   <packaging>kjar</packaging>
   <name>SampleScore</name>
   <description></description>
-
-    <properties>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
-	</properties>
+  <distributionManagement>
+    <repository>
+      <id>guvnor-m2-repo</id>
+      <name>my repository</name>
+      <url>http://localhost:8080/business-central/maven2</url>
+    </repository>
+    <snapshotRepository>
+      <id>guvnor-m2-repo</id>
+      <name>my snapshot repository</name>
+      <url>http://localhost:8080/business-central/maven2</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>com.thoughtworks.xstream</groupId>
@@ -50,18 +61,18 @@
       <version>7.14.0.Final-redhat-00002</version>
       <scope>provided</scope>
     </dependency>
-	<dependency>
-	  <groupId>org.drools</groupId>
-	  <artifactId>drools-core</artifactId>
-	  <version>7.14.0.Final-redhat-00002</version>
-    <scope>provided</scope>
-	</dependency>
-		<dependency>
-			<groupId>org.drools</groupId>
-			<artifactId>drools-compiler</artifactId>
-			<version>7.14.0.Final-redhat-00002</version>
- <scope>provided</scope>
-		</dependency>
+    <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-core</artifactId>
+      <version>7.14.0.Final-redhat-00002</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-compiler</artifactId>
+      <version>7.14.0.Final-redhat-00002</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -73,16 +84,4 @@
       </plugin>
     </plugins>
   </build>
-<distributionManagement>
-    <snapshotRepository>
-      <id>guvnor-m2-repo</id>
-      <name>my snapshot repository</name>
-      <url>http://localhost:8080/business-central/maven2</url>
-    </snapshotRepository>
-    <repository>
-      <id>guvnor-m2-repo</id>
-      <name>my repository</name>
-      <url>http://localhost:8080/business-central/maven2</url>
-    </repository>
-</distributionManagement>
 </project>
